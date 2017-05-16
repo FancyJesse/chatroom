@@ -5,7 +5,7 @@ Chatroom
 
 A basic chatroom created with PHP, JavaScript, and MySQL.
 
-#Current webpage: [chatroom.fancyjesse.com](http://chatroom.fancyjesse.com)
+**Current webpage:** [chatroom.fancyjesse.com](http://chatroom.fancyjesse.com)
 
 
 Introduction
@@ -23,17 +23,14 @@ MySQL
 
 Installation
 ------------------------------------------------------------------------
-Before the installation, be sure to update & upgrade your current packages
-```
-$ sudo apt-get update && sudo apt-get upgrade
-```
-
 Clone the Chatrooom repository use the following:
 
 git
 ```
 $ git clone https://github.com/FancyJesse/chatroom
 ```
+
+TODO
 
 
 Usage
