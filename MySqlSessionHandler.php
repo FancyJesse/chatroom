@@ -2,9 +2,13 @@
 class MySqlSessionHandler{
 
 	protected $DB_CONN;
+	private $host = '';
+	private $user = '';
+	private $secret = '';
+	private $schema = '';
 
-	public function connect($host, $user, $secret, $schema){
-		$this->DB_CONN = new mysqli($host, $user, $secret, $schema);
+	public function connect(){
+		$this->DB_CONN = new mysqli($this->host, $this->user, $this->secret, $this->schema);
 		return !$this->DB_CONN->connect_errno;
 	}
 
