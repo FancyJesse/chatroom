@@ -7,7 +7,7 @@
 		echo false;
 		exit();
 	}
-	require_once('/home/website/MySqlSessionHandler.php');
+	require_once('MySqlSessionHandler.php');
 	$handler = new MySqlSessionHandler();
 	$res = $handler->connect();
 	if($res){
