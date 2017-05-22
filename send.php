@@ -1,6 +1,6 @@
 <?php
 	if(empty($_POST['user_id'])||empty($_POST['message'])){
-		header("Location: https://www.fancyjesse.com/projects/chatroom");
+		echo false;
 		exit();
 	}
 	require_once('/home/website/MySqlSessionHandler.php');
