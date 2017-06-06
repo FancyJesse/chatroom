@@ -54,7 +54,7 @@
 		function updateChat(){
 			$.ajax({
 				type: 'POST',
-				url: 'update.php',
+				url: 'scripts/update.php',
 				dataType: 'json',
 				data: {'last_message_time':last_message_time},
 				success: function (data) {
@@ -66,7 +66,7 @@
 			});
 		}
 		function send_message(message){
-			$.post('send.php', { 'user_id':user_id, 'message':message},
+			$.post('scripts/send.php', { 'user_id':user_id, 'message':message},
 				function(data){
 				}
 			);
@@ -104,7 +104,7 @@
 			if(verify()){
 				var username = document.getElementById('username').value.trim();
 				var secret = document.getElementById('password').value.trim();
-				$.post('/scripts/login.php', {'username':username, 'secret':secret},
+				$.post('scripts/login.php', {'username':username, 'secret':secret},
 					function(data){
 						if(data!=0){
 							data = JSON.parse(data);
@@ -137,7 +137,7 @@
 					notifier.innerHTML="Passwords do not match.";
 					return false;
 				}
-				$.post('/scripts/register.php', {'username':username, 'secret':secret, 'secret_verify':secret_verify},
+				$.post('scripts/register.php', {'username':username, 'secret':secret, 'secret_verify':secret_verify},
 					function(data){
 						console.log(data);
 						if(data!=0){

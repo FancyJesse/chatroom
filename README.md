@@ -11,7 +11,7 @@ A basic chatroom created with PHP, JavaScript, and MySQL.
 Introduction
 ------------------------------------------------------------------------
 This chatroom's messages are updated through polling.
-Messages are sent to everyone regardless of log-in status, but the user must be registered and logged-in to send messages. 
+Messages are sent to everyone regardless of log-in status, but the user must be registered and logged-in to send messages.
 
 
 Prerequisites
@@ -23,19 +23,31 @@ MySQL
 
 Installation
 ------------------------------------------------------------------------
-Clone the Chatrooom repository use the following:
+Install MySQL
+```
+$ apt-get install mysql-server --fix-missing
+```
 
-git
+Clone the Chatrooom project
 ```
 $ git clone https://github.com/FancyJesse/chatroom
 ```
 
-TODO
+
+Setup - Database
+------------------------------------------------------------------------
+In order to store and send messages to chatroom users, SQL tables are required.
+These tables can be automatically created my running **InitTables.php**.
+```
+$ php scripts/InitTables.php 
+```
 
 
 Usage
 ------------------------------------------------------------------------
-TODO
+Visit the webpage (index.php) to join the chatroom.
+
+Register and log-in to send messages.
 
 
 License

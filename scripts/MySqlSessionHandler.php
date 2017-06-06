@@ -16,6 +16,27 @@ class MySqlSessionHandler{
 		return $this->DB_CONN->close();
 	}
 
+	public function init_tables(){
+		$user_query = "CREATE TABLE IF NOT EXISTS `user` (
+			`user_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+			`username` varchar(15) NOT NULL,
+			`secret` binary(60) NOT NULL,
+			`date_created` datetime NOT NULL,
+			`last_login` datetime NOT NULL,
+			PRIMARY KEY (`user_id`),
+			UNIQUE KEY `username_UNIQUE` (`username`)
+			)";
+		$chatroom_query = "CREATE TABLE IF NOT EXISTS `chatroom` (
+			`message_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+			`user_id` int(11) NOT NULL,
+			`message` varchar(255) NOT NULL,
+			`time` datetime NOT NULL,
+			PRIMARY KEY (`message_id`)
+			)";
+		$this->DB_CONN->query($user_query);
+		$this->DB_CONN->query($chatroom_query);
+	}
+
 	public function user_info($username){
 		$query = 'SELECT * From user WHERE username=?';
 		$stmt = $this->DB_CONN->prepare($query);
