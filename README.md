@@ -5,7 +5,7 @@ Chatroom
 
 A basic chatroom created with PHP, JavaScript, and MySQL.
 
-**Current webpage:** [chatroom.fancyjesse.com](http://chatroom.fancyjesse.com)
+**Current webpage:** [Click here](https://fancyjesse.com/projects/chatroom/)
 
 
 Introduction
@@ -30,7 +30,7 @@ $ apt-get install mysql-server --fix-missing
 
 Clone the Chatrooom project
 ```
-$ git clone https://github.com/FancyJesse/chatroom
+$ git clone https://github.com/idle-user/chatroom
 ```
 
 
@@ -57,4 +57,4 @@ See the file "LICENSE" for license information.
 
 Authors
 ------------------------------------------------------------------------
-FancyJesse
+idle-user
